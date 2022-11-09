@@ -53,6 +53,11 @@
 			"onAutoForward": "notify"
 		}
 	},
+	
+	"onCreateCommand": "bash .devcontainer/on-create.sh ${containerWorkspaceFolder} > on-create.log 2>&1",
 
-	"onCreateCommand": "bash .devcontainer/on-create.sh ${containerWorkspaceFolder} > on-create.log 2>&1"
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/sshd:1": {}
+	}
 }
